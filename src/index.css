@@ -1,14 +1,15 @@
 :root {
-  --color-darkest: #343a40;
+  --color-darkest: #1a1a1a;
   --color-dark: #495057;
   --color-medium: #ced4da;
   --color-light: #f1f3f5;
 
-  --color-theme: #1098ad;
-  --color-accent: #ffa94d;
+  --color-theme: #2ec4b6;
+  --color-theme-dark: #26a497;
+  --color-accent: #e71d36;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chicle&display=swap");
 
 * {
   margin: 0;
@@ -40,11 +41,11 @@ body {
 }
 
 .app-header {
-  width: 66rem;
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .error {
@@ -60,9 +61,17 @@ img {
   width: 14rem;
 }
 
+.symbol {
+  font-size: 10rem;
+  margin-left: 1.2rem;
+}
+
 h1 {
-  font-family: "Codystar";
-  font-size: 5.6rem;
+  font-family: "Chicle";
+  font-size: 8.8rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-right: 1.2rem;
 }
 
 h2 {
@@ -98,6 +107,15 @@ h4 {
   color: var(--color-medium);
 }
 
+::-webkit-progress-value {
+  background-color: var(--color-theme);
+}
+
+/* Para Firefox */
+progress::-moz-progress-bar {
+  background-color: var(--color-theme);
+}
+
 progress {
   appearance: none;
   width: 100%;
@@ -105,22 +123,13 @@ progress {
   grid-column: 1 / -1;
 }
 
-::-moz-progress-bar {
-  background-color: var(--color-medium);
-  border-radius: 100px;
-}
-::-moz-range-progress {
-  background-color: var(--color-theme);
-  border-radius: 100px;
-}
-
 .btn {
   display: block;
   font-family: inherit;
-  color: inherit;
+  color: var(--color-darkest);
   font-size: 2rem;
-  border: 2px solid var(--color-dark);
-  background-color: var(--color-dark);
+  border: 2px solid var(--color-theme);
+  background-color: var(--color-theme);
   padding: 1.2rem 2.4rem;
   cursor: pointer;
   border-radius: 100px;
@@ -128,7 +137,7 @@ progress {
 }
 
 .btn:not([disabled]):hover {
-  background-color: var(--color-darkest);
+  background-color: var(--color-theme-dark);
 }
 
 .btn-option:not([disabled]):hover {
@@ -158,7 +167,7 @@ progress {
 .btn-option.correct {
   background-color: var(--color-theme);
   border: 2px solid var(--color-theme);
-  color: var(--color-light);
+  color: var(--color-darkest);
 }
 .btn-option.wrong {
   background-color: var(--color-accent);
@@ -207,7 +216,7 @@ progress {
   float: left;
   font-size: 1.8rem;
   color: var(--color-medium);
-  border: 2px solid var(--color-dark);
+  border: 2px solid var(--color-medium);
   padding: 1.35rem 2.8rem;
   border-radius: 100px;
 }
