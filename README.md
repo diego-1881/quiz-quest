@@ -10,12 +10,16 @@ Test your React knowledge with this interactive quiz.
 
 ## Technology Stack
 
-- ReactJS (<code>useEffect</code> and <code>useReducer</code>).
+- ReactJS (<code>useEffect</code>, <code>useReducer</code> and Context API).
 - json-server
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm server`
+
+Runs the `json-server` to start the fake API.
 
 ### `npm start`
 
